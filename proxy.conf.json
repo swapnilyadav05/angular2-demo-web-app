@@ -1,0 +1,1 @@
+{"/api/*":{"target":"http://undefined:8080/employee","secure":false,"changeOrigin":true,"logLevel":"debug","pathRewrite":{"^/api":""}}}

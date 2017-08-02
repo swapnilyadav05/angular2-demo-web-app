@@ -1,0 +1,51 @@
+<div class="container-fluid" id="home-container">
+  <div class="container-fluid">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid no-padding">
+        <div class="navbar-header">
+          <button type="button"
+                  class="navbar-toggle collapsed"
+                  data-toggle="collapse"
+                  data-target="#bs-example-navbar-collapse-1"
+                  aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <div class="img-responsive angular-image-url" ></div>
+          </a>
+        </div>
+        <ul class="collapse navbar-collapse navbar-ex1-collapse nav navbar-nav collapsable-navbar"
+            id="top-menu">
+          <li class="top-band-seperator" [routerLinkActive]="['active']">
+            <a [routerLink]="['./about']">
+              <span class="icon-gauge-2"></span>
+              <span><strong>About</strong></span>
+            </a>
+          </li>
+          <li class="top-band-seperator" [routerLinkActive]="['active']">
+            <a [routerLink]="['./movieQuery']">
+              <span class="icon-chart"></span>
+              <span><strong>Emp Add</strong></span>
+            </a>
+          </li>
+          <li class="top-band-seperator" [routerLinkActive]="['active', 'test']">
+            <a [routerLink]="['./favorites']">
+              <span class="icon-chart"></span>
+              <span><strong>Emp List</strong></span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 no-padding">
+          <router-outlet></router-outlet>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

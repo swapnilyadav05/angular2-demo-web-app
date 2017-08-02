@@ -1,0 +1,54 @@
+<div class="form-container">
+  <div class="row bordered-card">
+    <div class="col-lg-12">
+      <div class="bs-component">
+        <form class="well form-search form-inline" id="search-by-title-form"
+              #movieForm="ngForm" (ngSubmit)="submitData(movieForm)" novalidate autocomplete="off">
+          <fieldset>
+            <legend>Add Employee</legend>
+          </fieldset>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label class="control-label" for="t">Name:</label>
+                <input type="text" id="t" name="t" class="form-control" [(ngModel)]="movie.name">
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <label class="control-label">Designation:</label>
+                <select name="plot" class="form-control" style="width: 100px;" [(ngModel)]="movie.designation">
+                  <option value="" >Select</option>
+                  <option value="Software Developer">Software Developer</option>
+                  <option value="Manager">Manager</option>
+                  <option value="QA">QA</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-sm-8">
+              <div class="form-group">
+                <button type="submit" class="btn-sm btn-primary">Add</button>
+                <button type="button" class="btn-sm" (click)="resetForm($event)">Reset</button>
+              </div>
+            </div>
+          </div>
+
+          <div *ngIf="!dataLoaded && movieForm._submitted">
+            <div class="loading-text">{{'SAVING...'}}</div>
+            <div class="progress">
+              <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="100"
+                   aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+                <span class="sr-only">100% Complete (success)</span>
+              </div>
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
